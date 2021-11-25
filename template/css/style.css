@@ -1,0 +1,38 @@
+:root {
+  --primaryClr: #3a5c88;
+	--fontClr: #3f3f46;
+  --menuClr: #3d3d3d;
+  --footerClr: #3d3d3d;
+}
+body {
+	color: var(--fontClr);
+}
+nav {
+  /* background: var(--menuClr); */
+	background: rgba(0, 0, 0, .5);
+  color: white;
+}
+.logo a {
+  color: white;
+}
+.nav-list-item:hover {
+  background: var(--menuClr);
+}
+
+.hero {
+	background: linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7)), url('../images/business-3560916_1920.jpg') no-repeat right/cover;
+	background-attachment: fixed;
+  /* background: var(--primaryClr); */
+  color: white;
+	height: calc(100vh - 69px);
+	display: grid;
+	place-items: center;
+}
+.hero .headline {
+	font-size: 3rem;
+	font-weight: lighter;
+}
+.footer {
+	background: var(--footerClr);
+	color: white;
+}
