@@ -1,16 +1,26 @@
 :root {
-  --primaryClr: #3a5c88;
-	--fontClr: #3f3f46;
-  --menuClr: #3d3d3d;
+  --primaryClr: #661313;
+  --fontClr: #3f3f46;
+  --menuClr: #161616;
   --footerClr: #3d3d3d;
+  --whiteClr: #fff;
+  --transparentClr: rgba(0, 0, 0, 0.8);
+  --shadow: 0 20px 5px rgba(0, 0, 0, 0.8);
+  --lightGrayClr: #dfdfdf;
 }
 body {
-	color: var(--fontClr);
+  color: var(--fontClr);
 }
 nav {
-  /* background: var(--menuClr); */
-	background: rgba(0, 0, 0, .5);
   color: white;
+  box-shadow: var(--shadow);
+  background: var(--transparentClr);
+}
+nav.open {
+  background: var(--menuClr);
+}
+p {
+  line-height: 1.5;
 }
 .logo a {
   color: white;
@@ -18,21 +28,56 @@ nav {
 .nav-list-item:hover {
   background: var(--menuClr);
 }
-
+.btn {
+  background-color: var(--whiteClr);
+  color: var(--primaryClr);
+}
+.primary-btn {
+  background-color: var(--primaryClr);
+  color: var(--whiteClr);
+}
 .hero {
-	background: linear-gradient(to bottom, rgba(0, 0, 0, .1), rgba(0, 0, 0, .7)), url('../images/business-3560916_1920.jpg') no-repeat right/cover;
-	background-attachment: fixed;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)),
+    url('../images/light-blue-christmas-lighting-christmas-tree-christmas-decoration-25692-pxhere.com.jpg')
+      no-repeat center/cover;
+  /* background-attachment: fixed; */
   /* background: var(--primaryClr); */
   color: white;
-	height: calc(100vh - 69px);
-	display: grid;
-	place-items: center;
+  /* height: calc(100vh - 80px); */
+  height: 100vh;
+  padding-top: 80px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.hero-center {
+  width: 75%;
 }
 .hero .headline {
-	font-size: 3rem;
-	font-weight: lighter;
+  font-size: 2.25rem;
+  font-weight: lighter;
+}
+.hero .subhead {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero .headline {
+    font-size: 2.75rem;
+  }
+  .hero .subhead {
+    font-size: 1.75rem;
+  }
+}
+.section-image {
+  border: 0.75rem solid var(--primaryClr);
+}
+.section:nth-child(even) {
+  background-color: var(--lightGrayClr);
 }
 .footer {
-	background: var(--footerClr);
-	color: white;
+  background: var(--footerClr);
+  color: white;
+  text-align: center;
 }
