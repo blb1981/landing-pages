@@ -47,7 +47,7 @@ nav {
   position: fixed;
   width: 100%;
   height: auto;
-  /* padding-bottom: 1rem; */
+  padding-bottom: 1rem;
   z-index: 5;
 }
 
@@ -66,9 +66,10 @@ nav.open {
   left: 0;
   height: 100%;
   width: 100%;
-  padding: 0;
+  padding-bottom: 0 0 1rem 0;
   z-index: 3;
 }
+
 .nav-header {
   display: flex;
   width: 100%;
@@ -84,6 +85,13 @@ nav.open {
 @media screen and (min-width: 768px) {
   .nav-button {
     display: none;
+  }
+  .nav-center {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
   }
 }
 .nav-list {
@@ -210,12 +218,11 @@ section {
   }
 }
 footer {
-  font-size: .75rem;
+  font-size: 0.75rem;
   padding: var(--section-v-padding) var(--section-h-padding);
 }
 footer .link-group p {
   margin-bottom: 0;
-  
 }
 footer a {
   color: var(--light-text);
