@@ -1,0 +1,126 @@
+:root {
+  --primaryClr: #067c55;
+  --primaryHoverClr: #bbb;
+  --fontClr: #3f3f46;
+  --hoverFontClr: #777;
+  --menuClr: #161616;
+  --menuBgClr: #030;
+  --menuHoverClr: #555;
+  --footerClr: #3d3d3d;
+  --whiteClr: #fff;
+  --navClr: #067c55;
+  --navFontClr: rgb(255, 255, 255);
+  --navShadow: 0 5px 5px rgba(0, 0, 0, 0.8);
+  --lightGrayClr: #dfdfdf;
+  --logoFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --heroFont: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --heroFontWt: 700;
+  --heroFontClr: #067c55;
+  --h1Font: Courier;
+  --subheadFont: sans-serif;
+  --border: 2px;
+  --shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  --transition: all 0.5s;
+}
+body {
+  color: var(--fontClr);
+}
+nav {
+  color: var(--navFontClr);
+  box-shadow: var(--navShadow);
+  background: var(--navClr);
+}
+nav.open {
+  background: var(--navClr);
+}
+h1 {
+  font-family: var(--h1Font);
+}
+h2 {
+  font-family: var(--subheadFont);
+}
+p {
+  line-height: 1.5;
+}
+.logo a {
+  color: var(--navFontClr);
+  font-family: var(--logoFont);
+  font-size: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .logo a {
+    font-size: 2rem;
+  }
+}
+.nav-list-item a {
+  color: var(--navFontClr);
+}
+.nav-list-item:hover {
+  background: var(--menuHoverClr);
+}
+.btn {
+  background-color: var(--primaryClr);
+  color: var(--whiteClr);
+  border-radius: var(--border);
+  box-shadow: var(--shadow);
+}
+.btn:hover {
+  background-color: var(--primaryHoverClr);
+  color: var(--hoverFontClr);
+  transition: var(--transition);
+}
+.primary-btn {
+  background-color: var(--primaryClr);
+  color: var(--whiteClr);
+}
+.hero {
+  background: linear-gradient(to top , rgba(255, 255, 255, .1), rgba(255, 255, 255, 1)), url('../images/hero.jpg') no-repeat center/cover;
+  /* background-attachment: fixed; */
+  /* background: var(--primaryClr); */
+  color: var(--heroFontClr);
+  /* height: calc(100vh - 80px); */
+  height: 80vh;
+  padding-top: 80px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.hero-center {
+  width: 75%;
+  max-width: 40rem;
+}
+.hero .headline {
+  font-size: 2.25rem;
+  font-weight: var(--heroFontWt);
+  font-family: var(--heroFont);
+}
+.hero .subhead {
+  font-size: 1.5rem;
+  font-weight: lighter;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .hero .headline {
+    font-size: 2.75rem;
+  }
+  .hero .subhead {
+    font-size: 1.75rem;
+  }
+}
+.section-image {
+  border: 0.75rem solid var(--primaryClr);
+  box-shadow: var(--shadow);
+}
+.section:nth-child(even) {
+  background-color: var(--lightGrayClr);
+}
+.section-heading {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer {
+  background: var(--footerClr);
+  color: white;
+  text-align: center;
+}
